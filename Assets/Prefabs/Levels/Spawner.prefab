@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &223384996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223384997}
+  m_Layer: 0
+  m_Name: BakeArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223384997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223384996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.185, y: 0.3, z: -0.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1322583829625955370}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1322583829625955375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322583829625955370}
+  - component: {fileID: 1322583829625955373}
+  - component: {fileID: 1322583829625955372}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1322583829625955370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322583829625955375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65701497, y: 3.2470052, z: 6.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 223384997}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1322583829625955373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322583829625955375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba0729c66bfafa4581098af2f59cdd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnArea: {fileID: 1322583829625955375}
+--- !u!114 &1322583829625955372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322583829625955375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd064f8a07e88a4484a7267f4ac62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Bread
+    prefab:
+    - {fileID: 1228994051241028, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 3}
+    size: 5
+  - tag: Cake
+    prefab:
+    - {fileID: 100000, guid: 890ed3c7ad072c845ab28d81ac01b14c, type: 3}
+    size: 5
+  - tag: Donuts
+    prefab:
+    - {fileID: 100000, guid: 1168e432e0c205345b90c4ec2f307c97, type: 3}
+    size: 5
+  - tag: Fish
+    prefab:
+    - {fileID: 1151177373984322, guid: 1cc7cbbec1f220841a9ed6c3046dddfb, type: 3}
+    size: 5
+  - tag: Ham
+    prefab:
+    - {fileID: 1103729609193184, guid: b5633769281ca0940b368cbed17b7ec0, type: 3}
+    size: 5
+  - tag: Hamburger
+    prefab:
+    - {fileID: 100000, guid: 2d434559430d5e54183217ebf67f2bba, type: 3}
+    size: 5
+  - tag: HamEgg
+    prefab:
+    - {fileID: 100000, guid: 108b1dfb3718d604e9452dfa37a30cdc, type: 3}
+    size: 5
+  - tag: IceCream
+    prefab:
+    - {fileID: 100000, guid: a7dfc8f0b06a1f64a889c6c9e36e23d5, type: 3}
+    size: 5
+  - tag: Pie
+    prefab:
+    - {fileID: 1436622047631754, guid: a7ad2ea77ce8b7046997418d2425deb3, type: 3}
+    size: 5
+  - tag: Waffle
+    prefab:
+    - {fileID: 100000, guid: 5b63de927760304438a3c6ac347846d5, type: 3}
+    size: 5
