@@ -16,31 +16,38 @@ public class TriggerControlller : MonoBehaviour
             {
                 counted = 5;
                 GameManager.instance.PointCounter(counted);
-                collider.gameObject.SetActive(false);
+                TriggerCompleted(collider);
             }
             else if (FoodType == FoodEnum.NonSweetCounter && collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.Sweet)
             {
                 counted = -5;
                 GameManager.instance.PointCounter(counted);
-                collider.gameObject.SetActive(false);
+                TriggerCompleted(collider);
             }
-            if (FoodType == FoodEnum.NonSweetCounter && collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.NonSweet)
+            else if (FoodType == FoodEnum.NonSweetCounter && collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.NonSweet)
             {
                 counted = 5;
                 GameManager.instance.PointCounter(counted);
-                collider.gameObject.SetActive(false);
+                TriggerCompleted(collider);
             }
-            else if (FoodType == FoodEnum.NonSweetCounter && collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.Sweet)
+            else if (FoodType == FoodEnum.SweetCounter && collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.NonSweet)
             {
                 counted = -5;
                 GameManager.instance.PointCounter(counted);
-                collider.gameObject.SetActive(false);
+                TriggerCompleted(collider);
             }
             if (FoodType == FoodEnum.GarbageCollector && (collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.NonSweet || collider.GetComponent<TriggerControlller>().FoodType == FoodEnum.Sweet))
             {
-                collider.gameObject.SetActive(false);
+                TriggerCompleted(collider);
             }
         }
     }
-   
+   void TriggerCompleted(Collider collider)
+    {
+        Rigidbody rb = collider.GetComponent<Rigidbody>();
+        ConstantForce SettingConstantForce = collider.GetComponent<ConstantForce>();
+        SettingConstantForce.force = Vector3.zero;
+        rb.velocity = Vector3.zero;
+        collider.gameObject.SetActive(false);
+    }
 }

@@ -58,7 +58,7 @@ public class CubeSpawner : MonoBehaviour
                     FoodCreator("HamEgg");
                     yield return new WaitForSeconds(4f);
                     FoodCreator("Ham");
-                    yield return new WaitForSeconds(4f);
+                    yield return new WaitForSeconds(3f);
                     FoodCreator("Donuts");
                     PullForce = -5;
                     ConveyorMover.OffsetSpeed = 0.0015f;
